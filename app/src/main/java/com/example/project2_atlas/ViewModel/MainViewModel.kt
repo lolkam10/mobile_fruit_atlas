@@ -4,9 +4,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.project2_atlas.Model.Fruit
+import com.example.project2_atlas.Entities.Fruit
 import com.example.project2_atlas.Model.Repo
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class MainViewModel() : ViewModel() {
@@ -19,8 +18,8 @@ class MainViewModel() : ViewModel() {
     fun getAll()
     {
         viewModelScope.launch {
-            val fruits = Repo.getAll()
-
+            //val fruits = Repo.getAll()
+            val fruits=Repo.getsearchedfruit()
             if(fruits != null)
                 _allFruits.value = fruits!!
         }

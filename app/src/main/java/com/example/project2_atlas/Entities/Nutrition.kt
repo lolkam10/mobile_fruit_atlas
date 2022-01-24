@@ -1,4 +1,4 @@
-package com.example.project2_atlas.Model
+package com.example.project2_atlas.Entities
 
 data class Nutrition (
     val carbohydrates : Double,
