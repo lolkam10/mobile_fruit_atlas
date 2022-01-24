@@ -20,7 +20,6 @@ class MainViewModel() : ViewModel() {
     {
         viewModelScope.launch {
             val fruits = Repo.getAll()
-            val x = 0
 
             if(fruits != null)
                 _allFruits.value = fruits!!
