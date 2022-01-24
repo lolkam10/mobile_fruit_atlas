@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         vm = ViewModelProvider(this).get(MainViewModel::class.java)
-        vm.allFruits.observe(this, Observer { findViewById<TextView>(R.id.mainView_tv).text = it[0].toString() })
+        vm.allFruits.observe(this, Observer { findViewById<TextView>(R.id.mainView_tv).text = it[0]?.nutrition?.toString()?:"nic" })
 
         vm.getAll()
     }
