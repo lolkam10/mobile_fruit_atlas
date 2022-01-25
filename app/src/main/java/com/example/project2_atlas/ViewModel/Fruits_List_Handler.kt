@@ -21,10 +21,9 @@ class Fruits_List_Handler(application: Application):AndroidViewModel(application
         fruit=Fruits(0L,0L,"",false)
 
     }
-    fun Search(name:String) {
-        viewModelScope.launch(Dispatchers.IO) {
-            database_Dao.getSearchedFruitsFromDatabase(name)
-        }
+    fun Search(name:String) :LiveData<List<Fruits>>{
+        fruits=database_Dao.getSearchedFruitsFromDatabase(name)
+        return fruits
     }
 
 }
