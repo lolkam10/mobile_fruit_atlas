@@ -15,6 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:hint="@string/fruit_name_hint"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/fragment_searchByName_RV"
         android:layout_width="match_parent"
@@ -23,6 +24,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fragment_searchByName_editText"
         app:layout_constraintBottom_toTopOf="@id/fragment_searchByName_but"/>
+
     <Button
         android:id="@+id/fragment_searchByName_but"
         android:layout_width="match_parent"

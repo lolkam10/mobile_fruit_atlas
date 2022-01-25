@@ -23,4 +23,9 @@
         <item>Bromeliaceae</item>
         <item>Solanaceae</item>
     </string-array>
+    <string name="bt_findByName">Find by name</string>
+    <string name="bt_findByFam">Find by family</string>
+    <string name="bt_myFav">My favourites</string>
+    <string name="bt_calc">Calculator</string>
+    <string name="bt_set">Settings</string>
 </resources>

@@ -8,14 +8,14 @@ import android.view.ViewGroup
 import com.example.project2_atlas.R
 
 
-class Sum_Of_Calories_Lists : Fragment() {
+class Calories_Calculator_Fragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        return inflater.inflate(R.layout.fragment_sum__of__calories__lists, container, false)
+        return inflater.inflate(R.layout.fragment_calories_calculator, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

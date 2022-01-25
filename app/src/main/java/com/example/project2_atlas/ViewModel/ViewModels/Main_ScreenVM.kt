@@ -1,4 +1,4 @@
-package com.example.project2_atlas.ViewModel
+package com.example.project2_atlas.ViewModel.ViewModels
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
