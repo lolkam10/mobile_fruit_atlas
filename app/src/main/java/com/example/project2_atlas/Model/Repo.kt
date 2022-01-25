@@ -1,5 +1,6 @@
 package com.example.project2_atlas.Model
 
+import com.example.project2_atlas.Entities.Fruit
 import retrofit2.awaitResponse
 
 class Repo {
@@ -13,9 +14,12 @@ class Repo {
             return Retro.api.getAll().awaitResponse().body()?: lista
         }
 
-        suspend fun getAllSensorsByStation(family:String):List<Fruit>? {
-
+        suspend fun getFruitByFamily(family:String): List<Fruit>? {
             return Retro.api.getFruitByFamily(family).awaitResponse().body()
+        }
+
+        suspend fun getFruitByName(name:String):Fruit? {
+            return Retro.api.getFruitByName(name).awaitResponse().body()
         }
     }
 }

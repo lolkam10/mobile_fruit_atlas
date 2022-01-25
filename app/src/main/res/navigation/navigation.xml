@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/main_Screen_Fragment2">
+    <fragment
+        android:id="@+id/main_Screen_Fragment2"
+        android:name="com.example.project2_atlas.View.Main_Screen_Fragment"
+        android:label="Main_Screen_Fragment" >
+        <action
+            android:id="@+id/action_main_Screen_Fragment2_to_search_For_Fruit_Fragment3"
+            app:destination="@id/search_For_Fruit_Fragment3" />
+        <action
+            android:id="@+id/action_main_Screen_Fragment2_to_search_By_Family_Fragment"
+            app:destination="@id/search_By_Family_Fragment" />
+        <action
+            android:id="@+id/action_main_Screen_Fragment2_to_favourites_List_Fragment"
+            app:destination="@id/favourites_List_Fragment" />
+        <action
+            android:id="@+id/action_main_Screen_Fragment2_to_calories_Calculator_Fragment"
+            app:destination="@id/calories_Calculator_Fragment" />
+        <action
+            android:id="@+id/action_main_Screen_Fragment2_to_settings_Fragment"
+            app:destination="@id/settings_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/search_For_Fruit_Fragment3"
+        android:name="com.example.project2_atlas.View.Search_For_Fruit_Fragment"
+        android:label="Search_For_Fruit_Fragment" >
+        <action
+            android:id="@+id/action_search_For_Fruit_Fragment3_to_fruit_Details_Fragment"
+            app:destination="@id/fruit_Details_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/search_By_Family_Fragment"
+        android:name="com.example.project2_atlas.View.Search_By_Family_Fragment"
+        android:label="Search_By_Family_Fragment" >
+        <action
+            android:id="@+id/action_search_By_Family_Fragment_to_fruit_Details_Fragment"
+            app:destination="@id/fruit_Details_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favourites_List_Fragment"
+        android:name="com.example.project2_atlas.View.Favourites_List_Fragment"
+        android:label="Favourites_List_Fragment" />
+    <fragment
+        android:id="@+id/fruit_Details_Fragment"
+        android:name="com.example.project2_atlas.View.Fruit_Details_Fragment"
+        android:label="Fruit_Details_Fragment" />
+    <fragment
+        android:id="@+id/calories_Calculator_Fragment"
+        android:name="com.example.project2_atlas.View.Calories_Calculator_Fragment"
+        android:label="Calories_Calculator_Fragment" />
+    <fragment
+        android:id="@+id/settings_Fragment"
+        android:name="com.example.project2_atlas.View.Settings_Fragment"
+        android:label="Settings_Fragment" />
+</navigation>

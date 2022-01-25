@@ -14,10 +14,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        vm = ViewModelProvider(this).get(MainViewModel::class.java)
-        vm.allFruits.observe(this, Observer { findViewById<TextView>(R.id.mainView_tv).text = it[0]?.nutrition?.toString()?:"nic" })
-
-        vm.getAll()
+//        vm = ViewModelProvider(this).get(MainViewModel::class.java)
+//        vm.allFruits.observe(this, Observer { findViewById<TextView>(R.id.mainView_tv).text = it[0].toString() })
+//        vm.oneFruit.observe(this, Observer { findViewById<TextView>(R.id.mainView_tv2).text = it.toString() })
+//        vm.familyOfFruits.observe(this, Observer { findViewById<TextView>(R.id.mainView_tv3).text = it.toString() })
+//
+//        vm.getAll()
+//        vm.getFruit("Melon")
+//        vm.getFamily("Musaceae")
     }
 
 }
