@@ -18,6 +18,7 @@ class Search_By_Family_Adapter(private val fruits: LiveData<List<Fruit>>, privat
         val fruitID = view.findViewById<TextView>(R.id.onerow_fruitID)
         val fruitName = view.findViewById<TextView>(R.id.onerow_fruitName)
         val fruitButtonAdd = view.findViewById<Button>(R.id.onerow_fruitBut)
+        //val myView=view
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FruitsListHolder {
@@ -29,6 +30,7 @@ class Search_By_Family_Adapter(private val fruits: LiveData<List<Fruit>>, privat
         holder.fruitID.text = fruits.value?.get(position)?.id.toString()
         holder.fruitName.text = fruits.value?.get(position)?.name
         holder.fruitButtonAdd.setOnClickListener {
+            //viewModel.
             //TODO
         }
     }
