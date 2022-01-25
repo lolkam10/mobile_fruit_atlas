@@ -1,10 +1,26 @@
 <resources>
-    <string name="app_name">project2_atlas</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="app_name">Fruit Atlas</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="add_new_calorie_list">Add new calorie list</string>
     <string name="remove_from_calorie_list">Remove from calorie list</string>
     <string name="search_for_fruit_from_all">Search for fruit</string>
     <string name="fruit_name_hint">Fruit Name</string>
     <string name="purge_favourite_fruit">Purge favourite fruit</string>
+    <string-array name="families_array">
+        <item>Rosaceae</item>
+        <item>Musaceae</item>
+        <item>Moraceae</item>
+        <item>Grossulariaceae</item>
+        <item>Myrtaceae</item>
+        <item>Rutaceae</item>
+        <item>Ericaceae</item>
+        <item>Sapindaceae</item>
+        <item>Anacardiaceae</item>
+        <item>Cucurbitaceae</item>
+        <item>Caricaceae</item>
+        <item>Passifloraceae</item>
+        <item>Ebenaceae</item>
+        <item>Bromeliaceae</item>
+        <item>Solanaceae</item>
+    </string-array>
 </resources>

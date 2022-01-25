@@ -5,16 +5,27 @@
     android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/Fruit_Name"
+        android:id="@+id/onerow_fruitID"
         android:textSize="20dp"
         android:text=""
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="3"
+        android:layout_weight="1"
         />
-
-
-
-
-
+    <TextView
+        android:id="@+id/onerow_fruitName"
+        android:textSize="20dp"
+        android:text=""
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        />
+    <TextView
+        android:id="@+id/onerow_fruitFamily"
+        android:textSize="20dp"
+        android:text=""
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        />
 </LinearLayout>

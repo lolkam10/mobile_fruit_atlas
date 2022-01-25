@@ -11,6 +11,7 @@ interface FruitAPI {
 
     @GET("api/fruit/family/{family}")
     fun getFruitByFamily(@Path("family") id:String): Call<List<Fruit>>
-    @GET("api/fruit/name/{name}")
-    fun getSearchedFruit(@Path("name") id:String): Call<List<Fruit>>
+
+    @GET("api/fruit/{name}")
+    fun getFruitByName(@Path("name") id:String): Call<Fruit>
 }

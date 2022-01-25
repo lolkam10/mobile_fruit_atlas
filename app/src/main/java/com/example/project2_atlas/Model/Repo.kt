@@ -9,13 +9,13 @@ class Repo {
         suspend fun getAll(): List<Fruit>? {
             return Retro.api.getAll().awaitResponse().body()
         }
-        suspend fun getsearchedfruit(): List<Fruit>? {
-            return Retro.api.getSearchedFruit("Banana").awaitResponse().body()
+
+        suspend fun getFruitByFamily(family:String): List<Fruit>? {
+            return Retro.api.getFruitByFamily(family).awaitResponse().body()
         }
 
-        suspend fun getAllSensorsByStation(family:String):List<Fruit>? {
-
-            return Retro.api.getFruitByFamily(family).awaitResponse().body()
+        suspend fun getFruitByName(name:String):Fruit? {
+            return Retro.api.getFruitByName(name).awaitResponse().body()
         }
     }
 }

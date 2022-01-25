@@ -6,5 +6,5 @@ data class Fruit (
     val family : String,
     val genus:String,
     val order : String,
-    val nutrition : Nutrition
+    val nutritions : Nutritions
         )
