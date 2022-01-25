@@ -31,6 +31,11 @@
         <action
             android:id="@+id/action_search_For_Fruit_Fragment3_to_fruit_Details_Fragment"
             app:destination="@id/fruit_Details_Fragment" />
+        <action
+            android:id="@+id/Refresh_fruit_Search"
+            app:destination="@id/search_For_Fruit_Fragment3"
+/>
+
     </fragment>
     <fragment
         android:id="@+id/search_By_Family_Fragment"
