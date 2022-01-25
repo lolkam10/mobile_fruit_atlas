@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.project2_atlas.Model.Database_Helper
+import com.example.project2_atlas.Model.FruitDatabase_DAO
 import com.example.project2_atlas.ViewModel.MainViewModel
 import org.w3c.dom.Text
 
@@ -22,6 +24,7 @@ class MainActivity : AppCompatActivity() {
 //        vm.getAll()
 //        vm.getFruit("Melon")
 //        vm.getFamily("Musaceae")
+
     }
 
 }

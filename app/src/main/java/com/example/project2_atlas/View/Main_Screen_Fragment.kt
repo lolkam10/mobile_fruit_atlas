@@ -6,16 +6,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.example.project2_atlas.R
+import com.example.project2_atlas.ViewModel.ViewModels.Main_ScreenVM
 
 class Main_Screen_Fragment : Fragment() {
-
+    lateinit var vm : Main_ScreenVM
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
+        vm = ViewModelProvider(this).get(Main_ScreenVM::class.java)
+        vm.makeDB()
         return inflater.inflate(R.layout.fragment_main__screen_, container, false)
     }
 

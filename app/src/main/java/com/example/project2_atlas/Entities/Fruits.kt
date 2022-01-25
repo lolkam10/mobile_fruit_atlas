@@ -14,6 +14,4 @@ data class Fruits(
     var fruitName: String,
     @ColumnInfo(name = "favouritebool")
     var favourite:Boolean
-
-
 )

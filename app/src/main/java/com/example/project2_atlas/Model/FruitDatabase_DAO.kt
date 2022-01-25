@@ -1,13 +1,12 @@
 package com.example.project2_atlas.Model
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Query
+import androidx.room.*
 import com.example.project2_atlas.Entities.Fruits
+
 @Dao
 interface FruitDatabase_DAO {
-    @Insert
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertFruit(fruit:Fruits)
     @Query("SELECT * FROM  fruit_table")
     fun getAllFruitsFromDatabase():LiveData<List<Fruits>>

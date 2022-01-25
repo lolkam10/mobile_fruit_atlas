@@ -18,10 +18,7 @@ import com.example.project2_atlas.ViewModel.ViewModels.Search_By_FamilyVM
 
 class Search_By_Family_Fragment : Fragment(), AdapterView.OnItemSelectedListener {
 
-    //lateinit var spinner: Spinner
     lateinit var vm: Search_By_FamilyVM
-    //lateinit var adapter: Search_By_Family_Adapter
-    //lateinit var layoutManager: LinearLayoutManager
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -47,14 +44,14 @@ class Search_By_Family_Fragment : Fragment(), AdapterView.OnItemSelectedListener
             it.adapter = adapter
             it.layoutManager = layoutManager
         }
+        spinner.onItemSelectedListener = this
 
 
     }
 
     @SuppressLint("NotifyDataSetChanged")
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-//        vm.getFamily(spinner.selectedItem.toString())
-//        vm.familyOfFruits.observe(viewLifecycleOwner,{adapter.notifyDataSetChanged()})
+        vm.getFamily(parent?.getItemAtPosition(position).toString())
     }
 
     override fun onNothingSelected(parent: AdapterView<*>?) {
