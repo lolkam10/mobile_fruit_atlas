@@ -1,5 +1,6 @@
 package com.example.project2_atlas.View
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -30,6 +31,7 @@ class Search_For_Fruit_Fragment : Fragment() {
         return inflater.inflate(R.layout.fragment_search__for__fruit_, container, false)
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val factory_list=Fruit_List_Handler_Factory((requireNotNull(this.activity).application))
@@ -66,16 +68,10 @@ class Search_For_Fruit_Fragment : Fragment() {
         }
         view.findViewById<Button>(R.id.fragment_searchByName_but).setOnClickListener{
 
-            viewModel_Fruit_List.fruits=viewModel_Fruit_List.Search(view.findViewById<EditText>(R.id.fragment_searchByName_editText).text.toString())
-            it.findNavController().navigate(R.id.Refresh_fruit_Search)
+            viewModel_Fruit_List.fruits = viewModel_Fruit_List.Search(view.findViewById<EditText>(R.id.fragment_searchByName_editText).text.toString())
+            //it.findNavController().navigate(R.id.Refresh_fruit_Search)
 
         }
-        //var field=view.findViewById<EditText>(R.id.fragment_searchByName_editText)
 
-        //var TextField=(EditText)findViewById(R.id.fragment_searchByName_editText);
-       // view.findViewById<EditText>(R.id.fragment_searchByName_editText).addTextChangedListener({
-      //  @Override
-
-      //  });
     }
 }

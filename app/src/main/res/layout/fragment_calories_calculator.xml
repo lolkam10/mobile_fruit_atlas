@@ -8,24 +8,25 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment_caloriesCalc_RV"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/Go_To_Add_Calorie_List"
+        app:layout_constraintBottom_toTopOf="@id/fragment_caloriesCalc_but_add"
         />
 
     <Button
-        android:id="@+id/Go_To_Add_Calorie_List"
+        android:id="@+id/fragment_caloriesCalc_but_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/add_new_calorie_list"
-        app:layout_constraintBottom_toTopOf="@id/Remove_From_Calorie_List"
+        app:layout_constraintBottom_toTopOf="@id/fragment_caloriesCalc_but_del"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
     <Button
-        android:id="@+id/Remove_From_Calorie_List"
+        android:id="@+id/fragment_caloriesCalc_but_del"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/remove_from_calorie_list"

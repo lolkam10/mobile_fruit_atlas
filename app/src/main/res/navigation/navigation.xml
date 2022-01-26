@@ -56,9 +56,17 @@
     <fragment
         android:id="@+id/calories_Calculator_Fragment"
         android:name="com.example.project2_atlas.View.Calories_Calculator_Fragment"
-        android:label="Calories_Calculator_Fragment" />
+        android:label="Calories_Calculator_Fragment" >
+        <action
+            android:id="@+id/action_calories_Calculator_Fragment_to_choose_Fruit_To_List_Fragment"
+            app:destination="@id/choose_Fruit_To_List_Fragment" />
+    </fragment>
     <fragment
         android:id="@+id/settings_Fragment"
         android:name="com.example.project2_atlas.View.Settings_Fragment"
         android:label="Settings_Fragment" />
+    <fragment
+        android:id="@+id/choose_Fruit_To_List_Fragment"
+        android:name="com.example.project2_atlas.View.Choose_Fruit_To_List_Fragment"
+        android:label="Choose_Fruit_To_List_Fragment" />
 </navigation>

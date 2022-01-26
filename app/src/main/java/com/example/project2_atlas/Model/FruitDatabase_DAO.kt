@@ -10,6 +10,8 @@ interface FruitDatabase_DAO {
     fun insertFruit(fruit:Fruits)
     @Query("SELECT * FROM  fruit_table")
     fun getAllFruitsFromDatabase():LiveData<List<Fruits>>
+    @Query("SELECT * FROM  fruit_table WHERE fruitName == :name")
+    fun getFruitsByName(name:String):LiveData<Fruits>
     @Query("SELECT * FROM  fruit_table WHERE favouritebool=1")
     fun getFavouriteFruitsFromDatabase():LiveData<List<Fruits>>
     @Query("SELECT * FROM  fruit_table WHERE fruitName LIKE '%' || :name || '%'")
