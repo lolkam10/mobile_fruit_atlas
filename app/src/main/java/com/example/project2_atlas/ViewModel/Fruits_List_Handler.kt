@@ -43,5 +43,10 @@ class Fruits_List_Handler(application: Application):AndroidViewModel(application
         Favouritefruits=database_Dao.getFavouriteFruitsFromDatabase()
         return Favouritefruits
     }
+    fun RemoveFromFavourites(name: String){
+        viewModelScope.launch(Dispatchers.IO) {
+            database_Dao.RemoveFromFavourites(name)
+        }
+    }
 
 }

@@ -24,7 +24,7 @@ class Favourites_List_Adapter(private val fruits: LiveData<List<Fruits>>, privat
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Search_By_Name_Holder {
         val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.one_fruit_row, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.one_favourite_row, parent, false)
         return Search_By_Name_Holder(view)
     }
     override fun onBindViewHolder(holder: Search_By_Name_Holder, position: Int) {
@@ -37,10 +37,11 @@ class Favourites_List_Adapter(private val fruits: LiveData<List<Fruits>>, privat
             holder.myView.findNavController().navigate(R.id.action_favourites_List_Fragment_to_fruit_Details_Fragment,bundle)
         }
         holder.button.setOnClickListener(){
-            fruits.value?.get(position)?.favourite=true
-            val x=fruits.value?.get(position)?.favourite!!
-            viewModel.AddToFavourites(fruits.value?.get(position)?.fruitName!!)
-            val z=0
+            viewModel.RemoveFromFavourites(fruits.value?.get(position)?.fruitName!!)
+        //fruits.value?.get(position)?.favourite=true
+            //val x=fruits.value?.get(position)?.favourite!!
+            //viewModel.AddToFavourites(fruits.value?.get(position)?.fruitName!!)
+            //val z=0
         }
     }
 
