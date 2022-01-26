@@ -1,6 +1,7 @@
 package com.example.project2_atlas.ViewModel.Adapters
 
 import android.content.Context
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,9 +31,11 @@ class Search_By_Name_Adapter(private val fruits: LiveData<List<Fruits>>,private 
     override fun onBindViewHolder(holder: Search_By_Name_Holder, position: Int) {
         holder.textViewID.text=fruits.value?.get(position)?.fruitID.toString()
         holder.textViewFruitName.text=fruits.value?.get(position)?.fruitName
+        val bundle = Bundle()
+        bundle.putString("name",fruits.value?.get(position)?.fruitName)
         holder.myView.setOnClickListener(){
             viewModel.fruit=Fruits(0L,0L,fruits.value?.get(position)?.fruitName!!,false)
-            holder.myView.findNavController().navigate(R.id.action_search_For_Fruit_Fragment3_to_fruit_Details_Fragment)
+            holder.myView.findNavController().navigate(R.id.action_search_For_Fruit_Fragment3_to_fruit_Details_Fragment,bundle)
         }
         holder.button.setOnClickListener(){
             fruits.value?.get(position)?.favourite=true
