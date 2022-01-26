@@ -38,8 +38,7 @@ class Search_By_Family_Adapter(private val fruits: LiveData<List<Fruit>>, privat
             holder.myView.findNavController().navigate(R.id.action_search_By_Family_Fragment_to_fruit_Details_Fragment,bundle)
         }
         holder.fruitButtonAdd.setOnClickListener {
-            //viewModel.
-            //TODO
+            viewModel.AddToFavourites(fruits.value?.get(position)?.name!!)
         }
     }
 

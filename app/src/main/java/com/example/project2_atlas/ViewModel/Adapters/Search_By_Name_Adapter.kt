@@ -18,8 +18,7 @@ import com.example.project2_atlas.ViewModel.Fruits_List_Handler
 class Search_By_Name_Adapter(private val fruits: LiveData<List<Fruits>>,private val viewModel:Fruits_List_Handler,context: Context):RecyclerView.Adapter<Search_By_Name_Adapter.Search_By_Name_Holder>() {
     inner class Search_By_Name_Holder(private val view: View) : RecyclerView.ViewHolder(view) {
         val textViewID = view.findViewById<TextView>(R.id.onerow_fruitID)
-        val textViewFruitName= view.findViewById<TextView>(R.id.onerow_fruitID)
-        //val textViewLastName = view.findViewById<TextView>(R.id.last_name)
+        val textViewFruitName= view.findViewById<TextView>(R.id.onerow_fruitName)
         val myView = view
         val button=view.findViewById<Button>(R.id.onerow_fruitBut)
     }
@@ -38,10 +37,8 @@ class Search_By_Name_Adapter(private val fruits: LiveData<List<Fruits>>,private 
             holder.myView.findNavController().navigate(R.id.action_search_For_Fruit_Fragment3_to_fruit_Details_Fragment,bundle)
         }
         holder.button.setOnClickListener(){
-            fruits.value?.get(position)?.favourite=true
-            val x=fruits.value?.get(position)?.favourite!!
+            fruits.value?.get(position)?.favourite = true
             viewModel.AddToFavourites(fruits.value?.get(position)?.fruitName!!)
-            val z=0
         }
     }
 

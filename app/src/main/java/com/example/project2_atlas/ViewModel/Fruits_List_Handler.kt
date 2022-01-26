@@ -35,7 +35,9 @@ class Fruits_List_Handler(application: Application):AndroidViewModel(application
         }
     }
     fun AddToFavourites(name: String){
-        viewModelScope.launch(Dispatchers.IO) {database_Dao.addToFavourites(name)  }
+        viewModelScope.launch(Dispatchers.IO) {
+            database_Dao.addToFavourites(name)
+        }
     }
     fun GetFavourites():LiveData<List<Fruits>>{
         Favouritefruits=database_Dao.getFavouriteFruitsFromDatabase()
