@@ -48,7 +48,11 @@
     <fragment
         android:id="@+id/favourites_List_Fragment"
         android:name="com.example.project2_atlas.View.Favourites_List_Fragment"
-        android:label="Favourites_List_Fragment" />
+        android:label="Favourites_List_Fragment" >
+        <action
+            android:id="@+id/action_favourites_List_Fragment_to_fruit_Details_Fragment"
+            app:destination="@id/fruit_Details_Fragment" />
+    </fragment>
     <fragment
         android:id="@+id/fruit_Details_Fragment"
         android:name="com.example.project2_atlas.View.Fruit_Details_Fragment"
