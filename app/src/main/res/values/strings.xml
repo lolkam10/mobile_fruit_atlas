@@ -28,4 +28,6 @@
     <string name="bt_myFav">My favourites</string>
     <string name="bt_calc">Calculator</string>
     <string name="bt_set">Settings</string>
+    <string name="add_fruit">Add Fruit</string>
+    <string name="write_value">Write value in gramms</string>
 </resources>

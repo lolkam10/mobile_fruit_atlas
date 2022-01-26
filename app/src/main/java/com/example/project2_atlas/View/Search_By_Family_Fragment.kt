@@ -52,7 +52,6 @@ class Search_By_Family_Fragment : Fragment(), AdapterView.OnItemSelectedListener
     @SuppressLint("NotifyDataSetChanged")
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
         vm.getFamily(parent?.getItemAtPosition(position).toString())
-
     }
 
     override fun onNothingSelected(parent: AdapterView<*>?) {

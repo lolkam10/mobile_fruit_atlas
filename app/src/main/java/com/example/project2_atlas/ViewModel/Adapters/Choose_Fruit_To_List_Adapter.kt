@@ -8,30 +8,27 @@ import android.widget.TextView
 import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.example.project2_atlas.Entities.Fruit
+import com.example.project2_atlas.Entities.Fruits
 import com.example.project2_atlas.R
+import com.example.project2_atlas.ViewModel.ViewModels.Choose_Fruit_To_ListVM
 import com.example.project2_atlas.ViewModel.ViewModels.Search_By_FamilyVM
 
-class Search_By_Family_Adapter(private val fruits: LiveData<List<Fruit>>, private val viewModel : Search_By_FamilyVM)
-    : RecyclerView.Adapter<Search_By_Family_Adapter.FruitsListHolder>(){
+class Choose_Fruit_To_List_Adapter (private val fruits: LiveData<List<Fruits>>, private val viewModel : Choose_Fruit_To_ListVM)
+    : RecyclerView.Adapter<Choose_Fruit_To_List_Adapter.FruitsListHolder>(){
 
     inner class FruitsListHolder(private val view : View): RecyclerView.ViewHolder(view){
-        val fruitID = view.findViewById<TextView>(R.id.onerow_fruitID)
-        val fruitName = view.findViewById<TextView>(R.id.onerow_fruitName)
-        val fruitButtonAdd = view.findViewById<Button>(R.id.onerow_fruitBut)
-        //val myView=view
+        val fName = view.findViewById<TextView>(R.id.onerow_fruitToList_name)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FruitsListHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.one_fruit_row,parent,false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.onerow_fruit_to_list,parent,false)
         return FruitsListHolder(view)
     }
 
     override fun onBindViewHolder(holder: FruitsListHolder, position: Int) {
-        holder.fruitID.text = fruits.value?.get(position)?.id.toString()
-        holder.fruitName.text = fruits.value?.get(position)?.name
-        holder.fruitButtonAdd.setOnClickListener {
-            //viewModel.
-            //TODO
+        holder.fName.text = fruits.value?.get(position)?.fruitName
+        holder.fName.setOnClickListener {
+            viewModel._chosenFruit.value= fruits.value?.get(position)
         }
     }
 

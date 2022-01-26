@@ -31,6 +31,11 @@
         <action
             android:id="@+id/action_search_For_Fruit_Fragment3_to_fruit_Details_Fragment"
             app:destination="@id/fruit_Details_Fragment" />
+        <action
+            android:id="@+id/Refresh_fruit_Search"
+            app:destination="@id/search_For_Fruit_Fragment3"
+/>
+
     </fragment>
     <fragment
         android:id="@+id/search_By_Family_Fragment"
@@ -51,9 +56,17 @@
     <fragment
         android:id="@+id/calories_Calculator_Fragment"
         android:name="com.example.project2_atlas.View.Calories_Calculator_Fragment"
-        android:label="Calories_Calculator_Fragment" />
+        android:label="Calories_Calculator_Fragment" >
+        <action
+            android:id="@+id/action_calories_Calculator_Fragment_to_choose_Fruit_To_List_Fragment"
+            app:destination="@id/choose_Fruit_To_List_Fragment" />
+    </fragment>
     <fragment
         android:id="@+id/settings_Fragment"
         android:name="com.example.project2_atlas.View.Settings_Fragment"
         android:label="Settings_Fragment" />
+    <fragment
+        android:id="@+id/choose_Fruit_To_List_Fragment"
+        android:name="com.example.project2_atlas.View.Choose_Fruit_To_List_Fragment"
+        android:label="Choose_Fruit_To_List_Fragment" />
 </navigation>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment_chooseFruitToList_RV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8" />
+
+    <TextView
+        android:layout_margin="10dp"
+        android:textSize="20sp"
+        android:id="@+id/fragment_chooseFruitToList_name"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text=""
+        android:layout_weight="1"/>
+
+    <EditText
+        android:id="@+id/fragment_chooseFruitToList_value"
+        android:inputType="numberDecimal"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:hint="@string/write_value"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/fragment_chooseFruitToList_but"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/add_fruit" />
+
+</LinearLayout>
