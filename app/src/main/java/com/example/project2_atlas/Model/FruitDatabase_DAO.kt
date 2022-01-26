@@ -16,6 +16,8 @@ interface FruitDatabase_DAO {
     fun getFavouriteFruitsFromDatabase():LiveData<List<Fruits>>
     @Query("SELECT * FROM  fruit_table WHERE fruitName LIKE '%' || :name || '%'")
     fun getSearchedFruitsFromDatabase(name:String):LiveData<List<Fruits>>
+    @Query("UPDATE fruit_table SET favouritebool=1 WHERE fruitName=:name")
+    fun addToFavourites(name: String)
     @Query("DELETE FROM fruit_table")
     fun DeleteAllFruits()
 

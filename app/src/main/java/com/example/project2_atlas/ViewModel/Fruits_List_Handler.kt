@@ -27,5 +27,13 @@ class Fruits_List_Handler(application: Application):AndroidViewModel(application
         fruits=database_Dao.getSearchedFruitsFromDatabase(name)
         return fruits
     }
+    fun ClearDatabase(){
+        viewModelScope.launch(Dispatchers.IO) {
+            database_Dao.DeleteAllFruits()
+        }
+    }
+    fun AddToFavourites(name: String){
+        viewModelScope.launch(Dispatchers.IO) {database_Dao.addToFavourites(name)  }
+    }
 
 }
