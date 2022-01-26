@@ -16,9 +16,11 @@ class Fruits_List_Handler(application: Application):AndroidViewModel(application
     private val database_Dao:FruitDatabase_DAO
     var fruit:Fruits
     var fruits:LiveData<List<Fruits>>
+    var Favouritefruits:LiveData<List<Fruits>>
     init{
         database_Dao=Database_Helper.getInstance(application).databaseDao
         fruits=database_Dao.getAllFruitsFromDatabase()
+        Favouritefruits=database_Dao.getAllFruitsFromDatabase()
         fruit=Fruits(0L,0L,"",false)
 
     }
@@ -34,6 +36,10 @@ class Fruits_List_Handler(application: Application):AndroidViewModel(application
     }
     fun AddToFavourites(name: String){
         viewModelScope.launch(Dispatchers.IO) {database_Dao.addToFavourites(name)  }
+    }
+    fun GetFavourites():LiveData<List<Fruits>>{
+        Favouritefruits=database_Dao.getFavouriteFruitsFromDatabase()
+        return Favouritefruits
     }
 
 }
