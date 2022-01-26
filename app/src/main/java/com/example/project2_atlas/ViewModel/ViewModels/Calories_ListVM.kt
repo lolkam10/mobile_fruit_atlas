@@ -30,6 +30,11 @@ class Calories_ListVM (application: Application) : AndroidViewModel(application)
         database_Dao.insertCalorie(fruitcalorie)
     }
     }
+    fun removeFromListCalorie(fruitcalorie:Fruit_Calorie){
+        viewModelScope.launch(Dispatchers.IO) {
+            database_Dao.deleteFromCalorie(fruitcalorie)
+        }
+    }
 
     //functions
     fun changeFruit(fruits: Fruits)

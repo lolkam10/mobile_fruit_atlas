@@ -23,7 +23,7 @@ class Calories_List_Adapter (private val fruits: LiveData<List<Fruit_Calorie>>, 
         val fName = view.findViewById<TextView>(R.id.CalorieListName)
         val CalorieCount=view.findViewById<TextView>(R.id.TotalCalorieCount)
         val veight=view.findViewById<TextView>(R.id.TotalWeight)
-        val checkbox=view.findViewById<CheckBox>(R.id.RemoveCalorieListCheckBox)
+        val button=view.findViewById<Button>(R.id.RemoveCalorieListButton)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FruitsListHolder {
@@ -33,11 +33,14 @@ class Calories_List_Adapter (private val fruits: LiveData<List<Fruit_Calorie>>, 
 
     override fun onBindViewHolder(holder: FruitsListHolder, position: Int) {
         holder.fName.text = fruits.value?.get(position)?.fruitName
-        holder.CalorieCount.text=0.0.toString()
+        holder.CalorieCount.text=fruits.value?.get(position)?.calorie_count.toString()
         holder.veight.text=fruits.value?.get(position)?.mass.toString()
       //  holder.fName.setOnClickListener {
             //viewModel._chosenFruit.value= fruits.value?.get(position)
       //  }
+        holder.button.setOnClickListener(){
+            viewModel.removeFromListCalorie(fruits.value?.get(position)!!)
+        }
         /*
         holder.checkbox.setOnCheckedChangeListener   {buttonView, isChecked ->
             //Add  to temp list of selected
