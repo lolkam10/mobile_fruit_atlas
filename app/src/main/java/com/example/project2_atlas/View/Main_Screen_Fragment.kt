@@ -18,7 +18,7 @@ class Main_Screen_Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         vm = ViewModelProvider(this).get(Main_ScreenVM::class.java)
-       // vm.makeDB()
+        //vm.makeDB()
         return inflater.inflate(R.layout.fragment_main__screen_, container, false)
     }
 
