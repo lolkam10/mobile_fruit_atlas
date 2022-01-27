@@ -154,6 +154,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+        <TextView
+            android:id="@+id/fragment_details_link"
+            android:textSize="20sp"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="" />
+
     </LinearLayout>
 
 

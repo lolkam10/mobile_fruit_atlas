@@ -27,4 +27,5 @@ class Fruit_DetailsVM (application: Application) : AndroidViewModel(application)
                 _fruit.value = newFruit!!
         }
     }
+
 }

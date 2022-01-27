@@ -40,4 +40,7 @@
     <string name="fat">Fat</string>
     <string name="calories">Calories</string>
     <string name="sugar">Sugar</string>
+    <string name="delete">Delete</string>
+    <string name="go_to_url_page">Go to URL page</string>
+    <string name="go_to"><a href='http://www.google.com'> Google </a></string>
 </resources>
