@@ -59,9 +59,10 @@ class Choose_Fruit_To_List_Fragment() :Fragment() {
         view.findViewById<Button>(R.id.fragment_chooseFruitToList_but).setOnClickListener(){
             vm3.changeFruit(vm.chosenFruit.value?.fruitName?:"Melon")
             var z=vm3.fruit.value?.nutritions?.calories.toString().toDouble()
-            z=z*0.01*view.findViewById<EditText>(R.id.fragment_chooseFruitToList_value).text.toString().toDouble()
+            z = z*0.01*view.findViewById<EditText>(R.id.fragment_chooseFruitToList_value).text.toString().toDouble()
+            z = Math.round(z).toDouble()
             var q=tv.text
-            var x=Fruit_Calorie(0L,tv.text.toString(),z,view.findViewById<EditText>(R.id.fragment_chooseFruitToList_value).text.toString().toDouble())
+            val x=Fruit_Calorie(0L,tv.text.toString(),z,view.findViewById<EditText>(R.id.fragment_chooseFruitToList_value).text.toString().toDouble())
             vm2.addToCalorieList(x)
 
         }
