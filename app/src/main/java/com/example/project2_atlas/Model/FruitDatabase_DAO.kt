@@ -29,5 +29,6 @@ interface FruitDatabase_DAO {
     fun RemoveFromFavourites(name: String)
     @Query("DELETE FROM fruit_table")
     fun DeleteAllFruits()
-
+    @Query("SELECT COUNT(*) FROM fruit_table")
+    fun CountFruitRows():Int
 }

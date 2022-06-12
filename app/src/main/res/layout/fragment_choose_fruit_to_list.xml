@@ -1,9 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Card_Main_Screen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#5DB075"
+        app:cardCornerRadius="35dp"
+        app:cardElevation="5dp"
+        app:cardPreventCornerOverlap="false"
+        android:layout_margin="10dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="25dp"
+                android:textColor="@color/white"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fruit Atlas"
+                android:textSize="30dp"
+                android:textColor="@color/white"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="25dp"
+                android:textColor="@color/white"
+                android:gravity="center"/>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/fragment_chooseFruitToList_RV"
@@ -19,7 +64,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:text=""
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:background="@drawable/black_frame"/>
 
     <EditText
         android:id="@+id/fragment_chooseFruitToList_value"
@@ -28,6 +74,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:hint="@string/write_value"
+        android:background="@drawable/black_frame"
         android:layout_weight="1" />
 
     <Button

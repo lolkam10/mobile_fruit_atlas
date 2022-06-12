@@ -18,7 +18,8 @@ class Main_ScreenVM (application: Application) : AndroidViewModel(application) {
 
     fun makeDB(){
         viewModelScope.launch(Dispatchers.IO) {
-            if (fruitsFromDB.value == null) {
+            println(fruitDAO.CountFruitRows())
+            if (fruitDAO.CountFruitRows()==0) {
                 val fruits = Repo.getAll()
                 val s = fruits!!.size - 1
                 for (i in 0..s) {
