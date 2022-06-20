@@ -36,12 +36,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="10dp"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="10dp"
         android:layout_marginVertical="20dp"
         android:entries="@array/families_array"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Card_Main_Screen"/>
+        app:layout_constraintTop_toBottomOf="@id/Card_Main_Screen"
+        android:background="@drawable/black_frame"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/fragment_searchByFamily_RV"
