@@ -9,7 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="lightgreen">#5DB075</color>
 
-    <color name="background_color">#ffff00</color>
+    <color name="background_color">#ffff5a</color>
     <color name="colorPrimary">#1e88e5</color>
     <color name="colorPrimaryDark">#005cb2</color>
     <color name="colorAccent">#c2185b</color>
