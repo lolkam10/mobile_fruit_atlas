@@ -8,4 +8,14 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="lightgreen">#5DB075</color>
+
+    <color name="background_color">#ffff00</color>
+    <color name="colorPrimary">#1e88e5</color>
+    <color name="colorPrimaryDark">#005cb2</color>
+    <color name="colorAccent">#c2185b</color>
+    <color name="cardBackground">#c3fdff</color>
+    <color name="colorSecondary">#c2185b</color>
+
+    <color name="primary_text">#ffffff</color>
+    <color name="secondary_text">#000000</color>
 </resources>

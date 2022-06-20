@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.project2_atlas.Entities.Fruit_Calorie
 import com.example.project2_atlas.Entities.Fruits
-@Database(entities=[Fruits::class,Fruit_Calorie::class], version = 2, exportSchema = false)
+@Database(entities=[Fruits::class,Fruit_Calorie::class], version = 3, exportSchema = false)
 abstract class Database_Helper: RoomDatabase() {
 
     abstract val databaseDao:FruitDatabase_DAO
