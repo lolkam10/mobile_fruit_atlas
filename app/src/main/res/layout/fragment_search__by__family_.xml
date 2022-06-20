@@ -5,20 +5,53 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Card_Main_Screen"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="35dp"
+        app:cardElevation="10dp"
+        android:elevation="6dp"
+        app:cardPreventCornerOverlap="false"
+        android:layout_marginVertical="15dp"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fruit Atlas"
+            android:textSize="40sp"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+    </androidx.cardview.widget.CardView>
+
     <Spinner
         android:id="@+id/fragment_searchByFamily_spin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="10dp"
+        android:layout_marginVertical="20dp"
         android:entries="@array/families_array"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/Card_Main_Screen"
+        android:background="@drawable/black_frame"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/fragment_searchByFamily_RV"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -1,37 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Card_Main_Screen"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="35dp"
+        app:cardElevation="10dp"
+        android:elevation="6dp"
+        app:cardPreventCornerOverlap="false"
+        android:layout_marginVertical="15dp"
+        android:layout_marginHorizontal="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fruit Atlas"
+            android:textSize="40sp"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+    </androidx.cardview.widget.CardView>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/fragment_chooseFruitToList_RV"
+        android:paddingHorizontal="10dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="8" />
+        android:layout_weight="6" />
 
     <TextView
-        android:layout_margin="10dp"
-        android:textSize="20sp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:paddingHorizontal="10dp"
+        android:textColor="@color/secondary_text"
         android:id="@+id/fragment_chooseFruitToList_name"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:text=""
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:background="@drawable/black_frame"/>
 
     <EditText
         android:id="@+id/fragment_chooseFruitToList_value"
+        android:paddingHorizontal="10dp"
         android:inputType="numberDecimal"
         android:textSize="20sp"
+        android:layout_marginHorizontal="10dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:hint="@string/write_value"
+        android:background="@drawable/black_frame"
         android:layout_weight="1" />
 
     <Button
         android:id="@+id/fragment_chooseFruitToList_but"
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
+        android:textSize="25sp"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:text="@string/add_fruit" />

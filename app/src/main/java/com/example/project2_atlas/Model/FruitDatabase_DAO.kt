@@ -1,6 +1,7 @@
 package com.example.project2_atlas.Model
 import androidx.lifecycle.LiveData
 import androidx.room.*
+import com.example.project2_atlas.Entities.Fruit_Calorie
 import com.example.project2_atlas.Entities.Fruits
 
 @Dao
@@ -8,6 +9,12 @@ interface FruitDatabase_DAO {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertFruit(fruit:Fruits)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insertCalorie(fruitcalorei:Fruit_Calorie)
+    @Delete
+    fun deleteFromCalorie(fruitcalorei:Fruit_Calorie)
+    @Query("SELECT * FROM  calorie_table")
+    fun getAllFruitsCalorieFromDatabase():LiveData<List<Fruit_Calorie>>
     @Query("SELECT * FROM  fruit_table")
     fun getAllFruitsFromDatabase():LiveData<List<Fruits>>
     @Query("SELECT * FROM  fruit_table WHERE fruitName == :name")
@@ -22,5 +29,6 @@ interface FruitDatabase_DAO {
     fun RemoveFromFavourites(name: String)
     @Query("DELETE FROM fruit_table")
     fun DeleteAllFruits()
-
+    @Query("SELECT COUNT(*) FROM fruit_table")
+    fun CountFruitRows():Int
 }

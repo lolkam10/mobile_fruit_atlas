@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Fruit Atlas</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="add_new_calorie_list">Add new calorie list</string>
+    <string name="add_new_calorie_list">Add fruits to list</string>
     <string name="remove_from_calorie_list">Remove from calorie list</string>
     <string name="search_for_fruit_from_all">Search for fruit</string>
     <string name="fruit_name_hint">Fruit Name</string>
@@ -40,4 +40,7 @@
     <string name="fat">Fat</string>
     <string name="calories">Calories</string>
     <string name="sugar">Sugar</string>
+    <string name="delete">Delete</string>
+    <string name="go_to_url_page">Go to URL page</string>
+    <string name="go_to"><a href='http://www.google.com'> Google </a></string>
 </resources>

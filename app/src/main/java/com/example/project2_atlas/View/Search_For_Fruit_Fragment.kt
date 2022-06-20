@@ -69,7 +69,7 @@ class Search_For_Fruit_Fragment : Fragment() {
         view.findViewById<Button>(R.id.fragment_searchByName_but).setOnClickListener{
 
             viewModel_Fruit_List.fruits = viewModel_Fruit_List.Search(view.findViewById<EditText>(R.id.fragment_searchByName_editText).text.toString())
-            //it.findNavController().navigate(R.id.Refresh_fruit_Search)
+            it.findNavController().navigate(R.id.Refresh_fruit_Search)
 
         }
 
